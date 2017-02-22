@@ -1,0 +1,70 @@
+\documentclass[a4paper]{report}
+% Use swiss german letters
+\usepackage[utf8]{inputenc}
+% Language: english
+\usepackage[english]{babel}
+% Fancy Figures
+\usepackage{graphicx}
+% Use Times
+\usepackage{mathptmx}
+% Display the Bibliography in the TOC
+\usepackage{tocbibind}
+% Better lists
+\usepackage{enumitem}
+% Use biblatex
+\usepackage[style=apa,backend=biber,citestyle=authoryear]{biblatex} 
+% Define the bibliography file
+\addbibresource{bibliography.bib}
+% To let LaTeX handle "
+\usepackage[autostyle, english = british]{csquotes}
+\DeclareLanguageMapping{english}{english-apa}
+% To have text wrap around pictures
+\usepackage{wrapfig}
+
+% Titlepage
+\newcommand*{\titleAP}{\begingroup % Create the command for including the title page in the document
+	\centering
+	\vspace*{\baselineskip} % Whitespace at the top of the page
+	
+	{\Large Pascal Baumann} and {\Large Nathanael Gogniat} and {\Large Reto Scheidegger}\\[0.167\textheight] % Author name
+	
+	{\Huge\bfseries Intellectual property in the digital age}\\[\baselineskip]
+	
+	{\Large \textit{Thesis paper InfKol FS2017}}\\
+	\today
+	
+	\vspace*{3\baselineskip} % Whitespace at the bottom of the page
+	\endgroup}
+
+\graphicspath{{./img/}}
+
+\begin{document}
+
+\titleAP
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\chapter{Introduction}
+
+\section{Preamble}
+Very happy to have found likeminded people in his quest, little \LaTeX-man sat down to present a working example. \parencite{Baumann2017}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[keepaspectratio=true,height=8\baselineskip]{compiling.png}
+	\caption{This would be a picture}
+	\label{fig:xkcd_compiling}
+\end{figure}
+
+\subsection{Pretext}
+This would be a subsection with a reference to figure \ref{fig:xkcd_compiling}.
+
+\newpage
+
+\printbibliography
+
+\end{document}          
