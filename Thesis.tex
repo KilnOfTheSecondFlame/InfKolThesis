@@ -3,10 +3,10 @@
 \usepackage[utf8]{inputenc}
 % Language: english
 \usepackage[english]{babel}
+% Blindtext package
+\usepackage{blindtext}
 % Fancy Figures
 \usepackage{graphicx}
-% Use Times
-\usepackage{mathptmx}
 % Display the Bibliography in the TOC
 \usepackage{tocbibind}
 % Better lists
@@ -42,6 +42,9 @@
 
 \titleAP
 
+\begin{abstract}
+	\blindtext
+\end{abstract}
 \newpage
 
 \tableofcontents
@@ -49,22 +52,29 @@
 \newpage
 
 \chapter{Introduction}
+% TODO remove - Labels are used for in book referencing - ie. if you want to reference this chapter you would use \ref{ch:Intro}
+\label{ch:Intro}
 
-\section{Preamble}
-Very happy to have found likeminded people in his quest, little \LaTeX-man sat down to present a working example. \parencite{Baumann2017}
+\section{Copyright}
+\label{sec:Copyright}
 
-\begin{figure}[htb]
-	\centering
-	\includegraphics[keepaspectratio=true,height=8\baselineskip]{compiling.png}
-	\caption{This would be a picture}
-	\label{fig:xkcd_compiling}
-\end{figure}
+\section{Patents}
+\label{sec:Patents}
 
-\subsection{Pretext}
-This would be a subsection with a reference to figure \ref{fig:xkcd_compiling}.
+\section{Trademark}
+\label{sec:Trademark}
+
+\section{Organisations}
+\label{sec:Orgas}
+
+\section{Digital Age}
+\label{sec:Digital age}
+
+\chapter{Conclusion}
 
 \newpage
 
+% TODO remove - The bibliography is only printed if there are quotations in the text
 \printbibliography
 
 \end{document}          
